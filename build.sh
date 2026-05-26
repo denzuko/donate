@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-QROPTS="-background=00000000 --foreground=FFFFFFFF"
+QROPTS="-verbose -background=00000000 --foreground=FFFFFFFF"
 
 xargs -a wallets.txt -P4 -n1 -- /usr/bin/env QROPTS=$QROPTS sh -c '
     label="${1%%:*}"; address="${1#*:}";
